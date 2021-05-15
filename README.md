@@ -28,3 +28,7 @@ Let the audience control the playing of the movie (Play and Pause).
  # Controls
  - To Pause the player (only audience) type `>cmd pause` in the chat box and send.
  - To Resume the player (if you're audience) type `>cmd play` in the chat box and send.
+
+### Issues
+- **Reason for using the Tab Opened by Meet**
+      - Browsers do not allow communication between tabs common tabs. Tabs opened by Google Meet can communicate with each other.
