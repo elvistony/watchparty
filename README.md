@@ -3,7 +3,11 @@
 Host your very own Watch Party with Popular Web-based streaming platforms using Google Meet - Watch Party!
 Let the audience control the playing of the movie (Play and Pause).
 
+![](imgs/host_party.gif)
+_Hosting a Watch Party_
 
+![](imgs/viewer_controls.gif)
+_Viewer(right) controls the player hosted by Presenter(left)_
 ### Steps to use:
 - Create a bookmarklet with the following script
 - Click the Copy Button on the right of this code.
@@ -16,7 +20,8 @@ Let the audience control the playing of the movie (Play and Pause).
 #### For the Host
 - Follow the above steps and then,
 - Create a new Watch Party from the options in Google Meet
-- Create another Bookmarklet "Watch Party Player" with the below code.
+- ![](imgs/host_party.gif)
+- Now, create another Bookmarklet "Watch Party Player" with the below code.
  
       javascript:!function(){function e(e,t=5e3){toast.children[1].innerText=e,toast.classList.remove("hide"),setTimeout(()=>{toast.classList.add("hide")},5e3)}state=!1,toast=document.createElement("div"),toast.innerHTML='<span onclick="toast.classList.add(\'hide\')" class="toast-close"> &#x2715 </span><p class="toast-msg">📺 Movie Party</p>',toast.classList.add("toast"),document.body.appendChild(toast),css=document.createElement("style"),css.innerHTML=".toast-msg{padding:10px;}.toast{z-index:100000;user-select:none;font-size:1.3em;position:absolute;background:#141b29;color:#576580;font-family:sans-serif;padding:5px 20px;border-radius:50px;width:155px;top:5%;right:2%;transition:1s ease;}.toast-close{position:relative;float:right;height:20px;width:20px;color:#141b29;background:#576580;padding:10px;right:-14px;border-radius:50%;transition:.3s ease;text-align:center;cursor:pointer}.toast-close:hover{color:#576580;background:#141b29}.hide{opacity:0}",document.head.appendChild(css),setTimeout(()=>{document.getElementsByTagName("video")[0].pause()},1e3),window.addEventListener("message",t=>{msg=t.data,cmd=msg.split(" "),"play"==cmd[1]?(document.getElementsByTagName("video")[0].play(),e("Resuming Player",3e3)):"pause"==cmd[1]?(document.getElementsByTagName("video")[0].pause(),e("Pausing Player")):console.log("Unknown Command",msg)})}();
       
