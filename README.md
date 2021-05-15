@@ -18,7 +18,7 @@ Let the audience control the playing of the movie (Play and Pause).
 - Create a new Watch Party from the options in Google Meet
 - Create another Bookmarklet "Watch Party Player" with the below code.
  
-      !function(){function e(e,t=5e3){toast.children[1].innerText=e,toast.classList.remove("hide"),setTimeout(()=>{toast.classList.add("hide")},5e3)}state=!1,toast=document.createElement("div"),toast.innerHTML='<span onclick="toast.classList.add(\'hide\')" class="toast-close"> &#x2715 </span><p class="toast-msg">📺 Movie Party</p>',toast.classList.add("toast"),document.body.appendChild(toast),css=document.createElement("style"),css.innerHTML=".toast-msg{padding:10px;}.toast{z-index:100000;user-select:none;font-size:1.3em;position:absolute;background:#141b29;color:#576580;font-family:sans-serif;padding:5px 20px;border-radius:50px;width:155px;top:5%;right:2%;transition:1s ease;}.toast-close{position:relative;float:right;height:20px;width:20px;color:#141b29;background:#576580;padding:10px;right:-14px;border-radius:50%;transition:.3s ease;text-align:center;cursor:pointer}.toast-close:hover{color:#576580;background:#141b29}.hide{opacity:0}",document.head.appendChild(css),setTimeout(()=>{document.getElementsByTagName("video")[0].pause()},1e3),window.addEventListener("message",t=>{msg=t.data,cmd=msg.split(" "),"play"==cmd[1]?(document.getElementsByTagName("video")[0].play(),e("Resuming Player",3e3)):"pause"==cmd[1]?(document.getElementsByTagName("video")[0].pause(),e("Pausing Player")):console.log("Unknown Command",msg)})}();
+      javascript:!function(){function e(e,t=5e3){toast.children[1].innerText=e,toast.classList.remove("hide"),setTimeout(()=>{toast.classList.add("hide")},5e3)}state=!1,toast=document.createElement("div"),toast.innerHTML='<span onclick="toast.classList.add(\'hide\')" class="toast-close"> &#x2715 </span><p class="toast-msg">📺 Movie Party</p>',toast.classList.add("toast"),document.body.appendChild(toast),css=document.createElement("style"),css.innerHTML=".toast-msg{padding:10px;}.toast{z-index:100000;user-select:none;font-size:1.3em;position:absolute;background:#141b29;color:#576580;font-family:sans-serif;padding:5px 20px;border-radius:50px;width:155px;top:5%;right:2%;transition:1s ease;}.toast-close{position:relative;float:right;height:20px;width:20px;color:#141b29;background:#576580;padding:10px;right:-14px;border-radius:50%;transition:.3s ease;text-align:center;cursor:pointer}.toast-close:hover{color:#576580;background:#141b29}.hide{opacity:0}",document.head.appendChild(css),setTimeout(()=>{document.getElementsByTagName("video")[0].pause()},1e3),window.addEventListener("message",t=>{msg=t.data,cmd=msg.split(" "),"play"==cmd[1]?(document.getElementsByTagName("video")[0].play(),e("Resuming Player",3e3)):"pause"==cmd[1]?(document.getElementsByTagName("video")[0].pause(),e("Pausing Player")):console.log("Unknown Command",msg)})}();
       
 - This opens a new tab, Paste the URL of the platform page and click Load Media.
 - Click the bookmarklet while you are in the Movie Page.
@@ -29,6 +29,12 @@ Let the audience control the playing of the movie (Play and Pause).
  - To Pause the player (only audience) type `>cmd pause` in the chat box and send.
  - To Resume the player (if you're audience) type `>cmd play` in the chat box and send.
 
+### Note
+- Audience can skip installing both and manually type the commands.
+- The Script renders the command messages to quick toggles for simpler use.
+
 ### Issues
 - **Reason for using the Tab Opened by Meet**
       - Browsers do not allow communication between tabs common tabs. Tabs opened by Google Meet can communicate with each other.
+- Toggles can only paste the text, the user must send it manually due to Google Meet's security policies.
+- will probably have lot more...
