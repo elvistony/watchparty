@@ -1,0 +1,93 @@
+body{
+    font-family: 'Roboto', sans-serif;
+    background: rgb(255,255,255);
+    color: #576580;
+    background: linear-gradient(to bottom, #141b29, #0c111b 300px);
+}
+
+.m-title{
+    color:#576580;
+}
+
+.m-url{
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #576580;
+    color: #ccced4;
+    font-size: 25px;
+    outline: none;
+    background: none;
+    border: 1px solid #576580;
+    padding: 30px;
+    border-radius: 50px;
+    transition: 1s cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.m-url:hover{
+    border: 1px solid #bbbbbb;
+}
+
+.m-load{
+    text-align: center;
+    height: 50px;
+    margin: 20px;
+    width: 160px;
+    border: 1px solid #576580;
+    background: none;
+    border-radius: 50px;
+    color: 576580;
+    transition: 0.3s ease;
+}
+
+.m-load:hover{
+    background: #576580;
+    color: #141b29;
+    
+}
+
+.m-load-text{
+    position: relative;
+    top: 5px;
+    font-weight: 600;
+}
+
+.m-load-icon{
+    float: right;
+    padding-right: 10px;
+}
+
+.active{
+    background: #576580;
+    color: #141b29;
+}
+
+.active:hover{
+    background: #ddd;
+    color: 576580;
+}
+
+.m-title-title{
+    font-size: 2em;
+    position: relative;
+    top: -20px;
+    font-variant: petite-caps;
+}
+/* Background */
+
+body {
+	background: linear-gradient(-45deg, #141b29, #0c111b, #151c29, #181f2e);
+	background-size: 400% 400%;
+	animation: gradient 25s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
