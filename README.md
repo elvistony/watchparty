@@ -23,6 +23,7 @@ Let the audience control the playing of the movie (Play and Pause).
 - This opens a new tab, Paste the URL of the platform page and click Load Media.
 - Click the bookmarklet while you are in the Movie Page.
 - Share the `Tab` where the video was loaded (Best Video Resolutions work with Sharing Tabs)
+- Close the message side-bar. (This is important!)
 - Voila! Its Ready.
     
  # Controls
